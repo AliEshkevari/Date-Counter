@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Chewy";
+  src: url("./assets/fonts/Chewy-Regular.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --white: #f6f4f0;
+  --dark-blue: #2e5077;
+  --light-blue: #4da1a9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+input[type="range"] {
+  cursor: pointer;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--dark-blue);
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--dark-blue);
+}
+
+input[type="text"] {
+  border: 1px solid var(--white);
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.8rem;
+}
+
+input[type="text"]:focus {
+  border: 1px solid var(--dark-blue);
+}
+
+body {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Chewy";
+  background-color: var(--white);
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 3.5rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-shadow: 2px 2px 8px 3px var(--dark-blue);
+  padding: 6rem 4rem;
+  border-radius: 0.8rem;
+  background-color: var(--white);
 }
 
-.App-link {
-  color: #61dafb;
+.container h1 {
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-family: "Bruno Ace SC";
+  color: var(--dark-blue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.buttons {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.button,
+.reset-button {
+  font-size: 2rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+.button:hover,
+.reset-button:hover {
+  transform: scale(1.1);
+  background-color: var(--dark-blue);
+}
+
+.button:active,
+.reset-button:active {
+  transform: scale(0.95);
+}
+
+.reset-button {
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  background-color: var(--dark-blue);
+}
+
+span {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 4rem 2.5rem;
   }
 }
