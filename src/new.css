@@ -141,7 +141,7 @@ p {
   line-height: 1.5;
 }
 
-/* Responsive Design */
+/* Making the page Responsive */
 @media (max-width: 768px) {
   html {
     font-size: 56%;
